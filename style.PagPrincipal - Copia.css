@@ -1,0 +1,855 @@
+/*global*/
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%; /*TROCAR PX POR REM*/
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  color: #404040;
+  font-size: 1.6rem;
+  line-height: 1.4;
+}
+
+h1 {
+  font-size: 3.32rem;
+  line-height: 1;
+  font-weight: 600;
+  letter-spacing: 2px; /*espaçamento entre as linhas*/
+  text-align: justify;
+}
+h2 {
+  font-size: 2.76rem;
+  font-weight: 400;
+  line-height: 1.1;
+}
+
+h3,
+.blog-titulopost {
+  font-size: 2.3rem;
+  line-height: 1.2;
+}
+
+strong {
+  font-weight: 600;
+}
+
+input {
+  padding: 1.02rem;
+  background-color: white;
+  box-shadow: inset 0 0 0.2rem 0.2rem rgba(0, 0, 0, 0.1);
+  border: 0;
+  border-radius: 0.8rem;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  color: #404040;
+}
+
+input:focus {
+  outline: none;
+}
+
+input::placeholder {
+  color: #404040;
+}
+.pink {
+  color: #ff006e;
+}
+.secao {
+  padding: 7.63rem 2rem;
+}
+.container {
+  max-width: 100rem; /*Deixa todo o espaço meio que denttro de uma caixa*/
+  margin: 0 auto; /*vao centralizar tudo no meio da página com a opçaõ de auto ele faz a conta para vc*/
+}
+
+.container-diferenciais,
+.container-blog {
+  max-width: 106rem;
+  border-radius: 5rem;
+  box-shadow: inset 0 0 0.8rem 0.3rem rgba(0, 0, 0, 0.15);
+}
+/*
+a:link,  
+a: :visited {
+}*/
+/*
+a:hover,
+a:active {
+
+}*/
+
+.botao {
+  display: inline-block;
+  text-align: center;
+  font-size: 2.4rem;
+  font-weight: 700;
+  text-decoration: none;
+  border-radius: 3rem;
+  padding: 0.65rem 2.5rem;
+  color: white;
+  box-shadow: 0 0.33rem 0.6rem rgba(0, 0, 0, 0.15);
+  border-top: 0;
+  border-left: 0;
+}
+
+.realce-semibold {
+  font-weight: 600;
+}
+
+.diferenciais-h3,
+.gratuito-h3 .diferenciais-h3-empresas {
+  font-size: 2.3rem;
+  line-height: 1.2;
+}
+
+.hero-paragrafo,
+.comoajudar-lista,
+.comoajudar-paragrafo,
+.diferenciais-p {
+  font-size: 1.92rem;
+  line-height: 1.3;
+}
+
+.caixa-h3,
+.caixa-blog-h2 {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  display: inline-block;
+  padding: 0.42rem 1.16rem;
+  color: white;
+  border-radius: 1rem;
+  transform: rotate(-3deg) translate(-50%, -80%); /*Essa tag faz a inclinação na caixinha*/
+  box-shadow: 0 0.33rem 0.6rem rgba(0, 0, 0, 0.15);
+}
+
+/*CABEÇALHO*/ /*Mod 7 aula 10 ensina a como fazer um cabeçalho*/
+
+.cabecalho {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3.12rem;
+  position: sticky;
+  z-index: 9999; /*serve para fazer com que a parte dois da pag n pegue o cabeçalho*/
+  top: 0;
+  left: 0;
+  background-color: rgb(
+    255,
+    255,
+    255
+  ); /*colocar um fundo branco é para que quando a barra do cabeçalho for rolada para 
+  baixo ela não fique tranparente e sim tenha um fundo*/
+  padding: 1.6rem 3.12rem;
+  box-shadow: 0 0.33rem 0.6rem rgba(0, 0, 0, 0.15);
+}
+
+nav ul {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+}
+
+.contem-filhos ul {
+  display: none;
+}
+
+ul {
+  list-style: none;
+}
+
+.item-lista-cabeçalho a {
+  color: #1f010e; /*COR*/
+  font-family: "Montserrat", sans-serif; /*FONTE*/
+  font-size: 1.4rem; /*tAMANHO FONTE*/
+  text-transform: uppercase; /*MAIUSCULA*/
+  text-decoration: none; /*TIRA LINHA*/
+  font-weight: 600; /*NEGRITO*/
+}
+
+.item-lista-cabeçalho a:hover,
+.item-lista-cabeçalho a:active {
+  /*Faz com que quando vc passa o cursor por cima da palavra ela mude de cor*/
+  color: #ff006e;
+}
+
+.item-lista-cabeçalho.contem-filhos ::after {
+  content: "\2bc6";
+}
+
+/*Seção hero*/
+
+.secao-hero {
+  /*Essa parte vai definir a imagem de fundo*/
+  background-image: url(https://i.pinimg.com/736x/89/f5/dc/89f5dc6088ebdd581b53ad6f245e1c6c.jpg);
+  background-position: 50%; /*essa tag faz com que a imagem seja centralizada*/
+  background-repeat: no-repeat;
+  background-size: cover; /*A imagem dá uma esticada sem que ela se repita nas bordas*/
+}
+
+.container-hero {
+  display: flex;
+  gap: 3.12rem;
+  align-items: center;
+}
+
+.hero-botao {
+  background-image: linear-gradient(
+    180deg,
+    #ff5d8f,
+    #ff87ab
+  ); /*faz um degradê dentro do botão*/
+  border-bottom: solid 0.4rem #a80a59; /*O solid ele fica com a moldura reta (sem pontilaho por exemplo)*/
+  border-right: solid 0.4rem #a80a59; /*coloca borda na parte do botão direito*/
+}
+
+.hero-botao:hover {
+  /*Isso define a cor de quando o cursor passa por cima do botao, presta atençaõ na class*/
+  background-color: white;
+  background-image: none;
+  border-bottom: solid 0.4rem rgb(192, 21, 21);
+  border-right: solid 0.4rem white;
+  color: #993c38;
+}
+
+.iframe-video {
+  /*display: none; /*fez o vídeo sumir*/
+  aspect-ratio: 16/9;
+  border-radius: 2.5rem;
+  flex: 5;
+}
+
+.hero-coluna {
+  display: flex;
+  flex-flow: column;
+  gap: 2rem;
+  flex: 6;
+  align-items: stretch;
+}
+
+.hero-bota {
+  display: flex;
+  flex-flow: column;
+  gap: 1.6rem;
+}
+
+/*SEÇÃO CONTEUDOS GRATUITOS*/
+
+.secao-conteudos {
+  background-image: url(https://i.pinimg.com/736x/5d/15/48/5d1548f6fb0cb82b4d7bd336f9baf6f0.jpg);
+  background-position: 50%; /*essa tag faz com que a imagem seja centralizada*/
+  background-repeat: no-repeat;
+  background-size: cover; /*A imagem dá uma esticada sem que ela se repita nas bordas*/
+}
+
+.container-conteudos {
+  display: flex;
+  align-items: relative;
+}
+
+.conteudos-titulos {
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+}
+
+.caixa-frente {
+  /*aquiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii*/
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  gap: 1.6rem;
+  position: relative;
+  box-shadow: inset 0 0.08rem 0.2rem rgba(0, 0, 0, 0.3);
+  border-radius: 2.5rem;
+  padding: 2rem;
+}
+
+.caixas-frente {
+  display: flex;
+  gap: 2.5rem;
+}
+
+.circulo-logo-curso {
+  /*circolos apagar*/
+  display: inline-block;
+  background-color: #e7e7e7;
+  border-radius: 50%;
+  padding: 0.52rem;
+  width: 4.5rem;
+  height: 4.5rem;
+}
+.circulo-logo-curso img {
+  /*tambem*/
+  width: auto;
+}
+
+.conteudos-coluna {
+  display: flex;
+  flex-flow: column;
+  gap: 3.9rem;
+  flex: 1;
+}
+
+.img-conteudos {
+  max-width: 47.8rem;
+  flex: 1;
+  position: relative; /*imagem passar por cima da caixinha do lado*/
+  left: 2rem;
+  z-index: 1;
+}
+
+.gratuito-h3 {
+  color: #faf5ff;
+  font-weight: 700;
+}
+
+.listas-redes {
+  display: flex;
+  flex-flow: column;
+  gap: 0.95rem;
+}
+
+.gratuito-link-lista li {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+}
+
+.gratuito-link-lista:link,
+.gratuito-link-lista:visited {
+  display: inline-block;
+  align-items: center;
+  padding: 0.42rem 3.12rem;
+  background-color: #eee;
+  border-radius: 2.5rem;
+  box-shadow: 0 0.33rem 0.6rem rgba(0, 0, 0, 0.15);
+  font-size: 1.92rem;
+  line-height: 1.3rem;
+  text-decoration: none;
+  color: inherit;
+}
+
+.gratuito-link-lista:hover,
+.gratuito-link-lista:active {
+  text-decoration: underline;
+}
+
+.gratuito-link-lista img {
+  width: 1.8rem;
+}
+
+/*SEÇÃO DIFERENCIAIS*/
+
+.secao-diferenciais {
+  background-color: #bfe2f7;
+}
+
+.container-diferenciais {
+  border-radius: 5rem;
+  background-color: white;
+  box-shadow: inset 0 0.08rem 0.3rem rgba(0, 0, 0, 0.3);
+}
+
+.divisao-azul-diferenciais {
+  display: flex;
+  gap: 4.88rem;
+  border-top-left-radius: 5rem;
+  border-top-right-radius: 5rem;
+  padding: 4.88rem 4.88rem 12rem 4.88rem;
+  padding-bottom: 12rem;
+  background-image: linear-gradient(225deg, #ff006e, #8338ec);
+  color: white;
+}
+
+.caixa-restante-diferenciais {
+  display: flex;
+  flex-flow: column;
+  gap: 4.88rem;
+  padding: 4.88rem 3.12rem;
+}
+.bloco-itens-diferenciais {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+  margin-top: -10rem;
+}
+
+.caixa-itens-diferenciais {
+  flex: 1;
+  display: flex;
+  flex-flow: column;
+  grid-area: 1.6rem;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  border-radius: 2.5rem;
+  background-color: #ebebeb;
+  box-shadow: 0 0.08rem 0.3rem rgba(0, 0, 0, 0.7);
+  padding: 7rem 2.5rem 3.12rem 2.5rem;
+}
+
+.caixa-item-diferenciais {
+  display: flex;
+  flex-flow: column;
+  gap: 1.02rem;
+}
+
+.caixa-imagem-diferencias {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: inline-block;
+  border-radius: 1.5rem;
+  background-color: #4cc9f0;
+  width: 10rem;
+  height: 10rem;
+  padding: 1.6rem;
+  box-shadow: inset 0 0.8rem 0.3rem rgba(0, 0, 0, 0.15);
+}
+
+.caixa-imagem-diferencias img {
+  width: 100%;
+}
+
+.diferenciais-empresas img {
+  width: 80rem;
+}
+
+.caixa-diferenciais-h2 {
+  flex: 5;
+  /*Barra lateral amarela*/
+  border-left: solid 0.5rem #ffb20f;
+  padding: 0.52rem 0 0.52rem 1.6rem;
+}
+
+.diferenciais-p {
+  flex: 5;
+  margin-top: 0.52rem;
+  text-align: right;
+}
+
+.diferenciais-p {
+  font-size: 1.92rem;
+}
+.diferenciais-h3 {
+  color: #ff006e;
+
+  font-weight: 600;
+}
+.diferenciais-h3-empresas {
+  font-weight: 400;
+}
+.diferenciais-h3-empresas a {
+  color: #ff006e;
+  font-weight: 700;
+  text-decoration: none;
+  gap: 2rem;
+}
+
+.ultima-frase {
+  display: flex;
+
+  flex-flow: column;
+  gap: 3.12rem;
+  align-items: center;
+}
+
+.bloco-imagens-diferenciais {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+/*SEÇÃO O QUE FALAM*/
+
+.secao-o-que-falam {
+  background-image: url(https://i.pinimg.com/564x/39/46/53/394653fc4be26868c2a84d28c8c15b63.jpg);
+  background-position: 50%; /*essa tag faz com que a imagem seja centralizada*/
+  background-repeat: no-repeat;
+  background-size: cover; /*A imagem dá uma esticada sem que ela se repita nas bordas*/
+}
+
+.container-oquefalam {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  gap: 3.5rem;
+}
+
+.oquefalam-titulo {
+  display: flex;
+  align-items: center;
+  gap: 1.9rem;
+  color: rgb(39, 37, 37);
+}
+
+.oquefalam-carrosel {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  align-self: stretch;
+  position: relative;
+  gap: 2rem;
+}
+.oquefalam-carrosel-imagens {
+  align-self: stretch;
+  gap: 2rem;
+}
+
+/*esse carrosel img apaga*/
+.carrosel-img {
+  flex: 1;
+  background-color: #6d42b9;
+  background-blend-mode: multiply; /*tecnicamente era para modificar os videos mas isso n deu certo*/
+  position: relative;
+  display: inline-block;
+  background-position: 50%;
+  background-size: cover;
+  aspect-ratio: 16/9; /*deixa as imagens do mesmo tamanho*/
+  width: 30%;
+  border-radius: 2.5rem;
+}
+
+/*.oquefalam-seta {
+  position: absolute;
+  top: 50%;
+} */
+
+.seta--esquerda {
+  top: 50%;
+  left: 0;
+  transform: translate(-150% -60%);
+}
+
+.seta--direita {
+  top: 50%;
+  right: 0;
+  transform: translate(150% -60%);
+}
+.item-navegação {
+  cursor: pointer;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.4rem;
+  border-radius: 50%;
+  background-color: rgb(235, 63, 183);
+}
+.item-navegação.ativa {
+  color: #112e61;
+}
+.botao-oque-falam {
+  background-image: linear-gradient(180deg, #ff006e, #8338ec);
+  border-bottom-color: #156db1;
+  border-right-color: #156db1;
+}
+
+/*Seção na mídia*/
+.secao-namidia {
+  padding-top: 3.9rem;
+  padding-bottom: 3.9rem;
+  background-image: url(https://i.pinimg.com/564x/7a/5b/44/7a5b44cb88e96908865c28f4d29574ad.jpg);
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.namidia-links,
+.namidia-titulo {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.namidia-links {
+  gap: 2rem;
+}
+.namidia-titulo {
+  color: #fffcfc;
+  gap: 1rem;
+}
+
+.container-namidia {
+  display: flex;
+  gap: 3.12rem;
+  justify-content: space-between; /*Joga um item em cada ponta e separa os dois*/
+}
+
+/*seção blog*/
+.secao-blog {
+  background-color: #ffffff; /*cor de fundo*/
+}
+
+.container-blog {
+  display: flex; /*todo mundo na horizontal*/
+  flex-flow: row wrap;
+  gap: 2.5rem;
+  position: relative;
+  border-radius: 5rem;
+  background-color: #fcd9f3;
+  box-shadow: inset 0 0.08rem 0.3rem rgba(0, 0, 0, 0.3);
+  padding: 4.88rem;
+  padding-top: 3rem;
+}
+
+.caixa-h3 {
+  background-image: linear-gradient(90deg, #7835a8, #6d42b9);
+}
+.caixa-blog-h2 {
+  top: -2rem; /*faz com que a caixinha suba no quadrado*/
+  width: max-content; /*O texto preenche a caixinha*/
+  background-image: linear-gradient(
+    90deg,
+    #ff006e,
+    #ff006e
+  ); /*Isso vai colorir a caixinha*/
+  padding: 1.2rem, 3.12rem;
+}
+
+.caixa-postblog {
+  display: flex;
+  flex-flow: column;
+  flex: 1 1 35%;
+  gap: 1.02rem;
+  border-radius: 2.5rem;
+  box-shadow: inset 0 0 0.4rem 1.5rem rgba(0, 0, 0, 0.11);
+  padding: 2rem;
+  background-color: white;
+}
+
+.blog-imgpostadoem {
+  display: flex;
+  flex-flow: column;
+  gap: 0.5rem;
+}
+
+.caixa-postblog img {
+  /*Vai definir os tamanhos corretos das imagens na caixinhas*/
+  width: 100%;
+}
+
+.blog-postadoem {
+  font-size: 1.33rem;
+  line-height: 1.5;
+}
+
+.blog-postadoem a {
+  font-weight: 600;
+  color: #ff006e;
+  text-decoration: none;
+}
+.blog-titulopost {
+  color: inherit; /*Cor padrão cinza*/
+  font-weight: 600;
+  text-decoration: none;
+}
+
+/*seção como posso te ajudar?*/
+.secao-comoajudar {
+  padding: 0;
+}
+
+.secao-sec-laranja {
+  background-image: url(https://i.pinimg.com/564x/7a/5b/44/7a5b44cb88e96908865c28f4d29574ad.jpg);
+  background-position: 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.secao-sec-laranja,
+.secao-sec-cinza {
+  padding: 7.63rem 2rem;
+}
+
+.caixa-comoajudar-h2 {
+  display: inline-block;
+  padding: 0.42rem 1.16rem;
+  color: white;
+  border-radius: 1rem;
+  box-shadow: 0 0.33rem 0.6rem rgba(0, 0, 0, 0.15);
+  background-image: linear-gradient(90deg, #54ace7, #d24df3);
+}
+
+.comoajudar-lista {
+  display: flex;
+  flex-flow: column;
+  gap: 1.28rem;
+  border-radius: 2.5rem;
+  box-shadow: inset 0 0 0.8rem 0.15rem rgba(0, 0, 0, 0.11);
+  padding: 2.5rem;
+  background-color: #ffffff;
+}
+
+.container-comoajudar {
+  width: 86rem;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  gap: 3.1rem;
+}
+
+.comoajudar-lista,
+.comoajudar-paragrafo {
+  font-family: "Montserrat", sans-serif;
+  gap: 2.1rem;
+}
+.comoajudar-lista a:link,
+.comoajudar-lista a:visited,
+.comoajudar-paragrafo a:link,
+.comoajudar-paragrafo a:visited {
+  color: #008ff7;
+  font-weight: 600;
+}
+
+.comoajudar-lista a:hover,
+.comoajudar-lista a:active,
+.comoajudar-paragrafo a:active,
+.comoajudar-paragrafo a:hover {
+  color: #4cd814;
+}
+
+.comoajudar-paragrafo {
+  font-weight: 400;
+}
+
+/*Seção Minicurso*/
+
+.secao-minicurso {
+  background-image: url(https://i.pinimg.com/564x/7a/5b/44/7a5b44cb88e96908865c28f4d29574ad.jpg);
+  background-position: 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: rgb(253, 253, 253);
+}
+
+.form-minicurso {
+  align-self: stretch;
+  display: flex;
+  justify-content: space-around;
+  align-items: end;
+  gap: 2rem;
+}
+
+.container-minicurso {
+  display: flex;
+  flex-flow: column;
+  gap: 2.5rem;
+  align-items: center;
+}
+
+.form div {
+  display: flex;
+  flex-flow: column;
+  gap: 0.82rem;
+}
+
+.form div label {
+  margin-left: 0.8rem;
+}
+
+.botao-minicurso {
+  background-image: linear-gradient(180deg, #00aeff, #8338ec);
+  border-bottom-color: #000000;
+  border-right-color: #000000;
+}
+
+.botao-minicurso:hover {
+  border-bottom-color: #aa1c6a;
+  border-right-color: #aa1c6a;
+}
+
+/*SEÇÃO RODAPÉ*/
+
+.container-rodape {
+  display: flex;
+  align-items: start;
+  gap: 4.8rem;
+}
+
+.logo-footer {
+  width: 18rem;
+}
+
+.subsecao-rodape,
+.sub-cursosonline,
+.subsecao-assistente {
+  display: flex;
+  flex-flow: column;
+  gap: 2rem;
+}
+
+.subsecao-assistente {
+  gap: 1.28rem;
+}
+
+.rodape-link-icone {
+  display: flex;
+  gap: 2rem;
+}
+
+.rodape-titulo,
+.rodape-subtitulo,
+.rodape-sub2 {
+  font-weight: 600;
+  font-size: 2.2rem;
+}
+
+.rodape-subtitulo {
+  font-size: 1.92rem;
+}
+
+.rodape-link {
+  color: #1a77a4;
+}
+
+.rodape-copy {
+  width: 106rem;
+}
+
+.rodape svg {
+  width: 2.4rem;
+}
+
+.rodape a:hover {
+  color: #f60;
+}
+
+.form-newslater {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  gap: 1.28rem;
+  border-radius: 2.5rem;
+  box-shadow: inset 0 0 0.8rem 0.15rem rgba(0, 0, 0, 0.11);
+  padding: 2.5rem;
+  background-color: #f7e0f4;
+}
+.botao-news {
+  background-image: linear-gradient(180deg, #fd63a6, #a975f1);
+  border-bottom-color: #156db1;
+  border-right-color: #156db1;
+}
+/*O "transform scale" ele dá a opção de quando vc passar o cursor por cima do botão ele diminuir de tamanho*/
+
+.logo-whats {
+  position: fixed;
+  right: 1rem;
+  bottom: 0.8rem;
+  width: 8.5rem;
+}
+
+.logo-whats:hover {
+  transform: translate(0.5rem, 0.5rem);
+}
+
+.logo-whats img {
+  width: 100%;
+}

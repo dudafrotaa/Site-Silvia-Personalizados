@@ -1,0 +1,67 @@
+/*Mudar a fonte de toda página*/
+
+h1,
+h2,
+h3,
+p,
+a,
+li {
+  font-family: "Montserrat", sans-serif;
+
+  /*Mudar o tamanho e largura das linhas*/
+}
+
+a {
+  font-family: "ALGERIAN";
+}
+
+h1 {
+  font-size: 45px;
+  line-height: 1;
+  color: rgb(255, 172, 216);
+}
+h2 {
+  font-size: 32px;
+  line-height: 1.1;
+  color: deeppink;
+}
+h3 {
+  font-size: 24px;
+  line-height: 1.2;
+}
+p {
+  font-size: 18px;
+  line-height: 1.4;
+}
+
+figcaption {
+  font-size: 12px;
+  font-style: italic;
+}
+
+a {
+  color: rgb(212, 6, 116);
+  font-size: 18px;
+  font-weight: 700;
+  text-decoration: double;
+}
+
+.realce-h1 {
+  color: rgb(255, 185, 208);
+}
+
+.GABI {
+  color: crimson;
+}
+
+.WhatsApp {
+  font-family: "ALGERIAN";
+  color: rgb(83, 12, 83);
+}
+.silviaac {
+  font-size: 18px;
+  font-weight: 800;
+  font-family: initial;
+  font-style: normal;
+  color: rgb(212, 6, 116);
+}

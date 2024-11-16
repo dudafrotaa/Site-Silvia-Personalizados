@@ -1,0 +1,71 @@
+* {
+  padding: 0;
+  margin: 900;
+  box-sizing: border-box;
+  border-radius: 30px 30px 30px 30px;
+}
+
+html {
+  font-size: 62.5%; /*TROCAR PX POR REM*/
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  color: #404040;
+  font-size: 1.6rem;
+  line-height: 1.7;
+  background-color: rgb(222, 173, 255);
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 22vh;
+  background-color: #fcc6ed;
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  color: rgb(0, 0, 0);
+  padding: 20px 40px;
+}
+
+.otitulo-silvia {
+  font-size: 1.1rem;
+  margin-bottom: 3px;
+  padding: 40px 500px;
+  text-align: center;
+}
+
+.secao {
+  margin-top: 5px; /* Espaçamento de 20px acima do botão */
+  padding: 40px 300px;
+  font-size: 2rem;
+  background-color: #fcc6ed;
+  color: rgb(15, 12, 12);
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  border-radius: 30px 30px 30px 30px;
+}
+
+.secao-love {
+  margin-top: 30px;
+}
+
+.logo-whats {
+  position: fixed;
+  right: 4rem;
+  bottom: 0.8rem;
+  width: 8.5rem;
+}
+
+.logo-whats:hover {
+  transform: translate(0.5rem, 0.5rem);
+}
+
+.logo-whats img {
+  width: 100%;
+}
